@@ -1,4 +1,4 @@
-import { useGetAllSpacexDragonsQuery } from '../../graphql/generated/spacex';
+import { useGetAllSpacexDragonsQuery } from 'graphql/generated/spacex';
 
 export const SpacexSection: React.FC = () => {
   const { data, loading } = useGetAllSpacexDragonsQuery();

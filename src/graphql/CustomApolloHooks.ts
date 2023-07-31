@@ -1,6 +1,6 @@
 import * as Apollo from "@apollo/client";
 import { TaggedTemplateExpression } from "typescript";
-import { useApolloMultiClient } from "../Provider/ApolloMultiClientProvider";
+import { useApolloMultiClient } from "Provider/ApolloMultiClientProvider";
 
 // Re-export everything else that has not been changed
 export * from "@apollo/client";

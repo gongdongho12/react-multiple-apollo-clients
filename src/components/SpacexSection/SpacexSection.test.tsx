@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { MockedProvider } from '@apollo/client/testing';
-import { SpacexSection } from './SpacexSection';
-import { GetAllSpacexDragonsDocument } from '../../graphql/generated/spacex';
+import { SpacexSection } from 'components/SpacexSection/SpacexSection';
+import { GetAllSpacexDragonsDocument } from 'graphql/generated/spacex';
 import { act } from 'react-dom/test-utils';
 import { wait } from '@testing-library/user-event/dist/utils';
 

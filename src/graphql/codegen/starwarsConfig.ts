@@ -1,5 +1,5 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
-import { API, starWarsURL } from '../ApolloClients';
+import { API, starWarsURL } from 'graphql/ApolloClients';
 
 const starWarsConfig: CodegenConfig = {
   schema: starWarsURL,

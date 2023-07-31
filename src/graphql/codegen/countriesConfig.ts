@@ -1,5 +1,5 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
-import { API, countriesURL } from '../ApolloClients';
+import { API, countriesURL } from 'graphql/ApolloClients';
 
 const countriesConfig: CodegenConfig = {
   schema: countriesURL,

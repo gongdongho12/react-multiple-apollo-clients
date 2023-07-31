@@ -1,5 +1,5 @@
 import { CodegenConfig } from '@graphql-codegen/cli';
-import { spacexURL } from '../ApolloClients';
+import { spacexURL } from 'graphql/ApolloClients';
 
 const spacexConfig: CodegenConfig = {
   schema: spacexURL,
