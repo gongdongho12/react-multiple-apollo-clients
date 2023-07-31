@@ -11,6 +11,8 @@
     "@types/node": "^16.18.36",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
+    "antd": "^5.7.3",
+    "craco-less": "^3.0.1",
     "graphql": "^16.6.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,9 +22,9 @@
   },
   "scripts": {
     "start": "npm run serve & npm run update-graphql -- --watch",
-    "serve": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "serve": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "update-graphql": "npm run update-graphql:spacex & npm run update-graphql:starwars & npm run update-graphql:countries",
     "update-graphql:spacex": "graphql-codegen --config src/graphql/codegen/spacexConfig.ts",
@@ -48,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@graphql-codegen/cli": "^4.0.1",
     "@graphql-codegen/introspection": "^4.0.0",
     "@graphql-codegen/typescript": "^4.0.0",
