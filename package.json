@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "npm run serve & npm run update-graphql -- --watch",
+    "start": "npm run update-graphql -- --watch && npm run serve",
     "serve": "craco start",
     "build": "craco build",
     "test": "craco test",

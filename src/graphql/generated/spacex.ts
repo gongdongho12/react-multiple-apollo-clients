@@ -18,6 +18,9 @@ export type Scalars = {
   Float: { input: number; output: number; }
   Date: { input: any; output: any; }
   ObjectID: { input: any; output: any; }
+  _Any: { input: any; output: any; }
+  federation__FieldSet: { input: any; output: any; }
+  link__Import: { input: any; output: any; }
   timestamptz: { input: any; output: any; }
   uuid: { input: any; output: any; }
 };
@@ -538,6 +541,7 @@ export type PayloadsFind = {
 
 export type Query = {
   __typename?: 'Query';
+  _service: _Service;
   capsule?: Maybe<Capsule>;
   capsules?: Maybe<Array<Maybe<Capsule>>>;
   capsulesPast?: Maybe<Array<Maybe<Capsule>>>;
@@ -1104,12 +1108,24 @@ export type Volume = {
   cubic_meters?: Maybe<Scalars['Int']['output']>;
 };
 
+export type _Service = {
+  __typename?: '_Service';
+  sdl?: Maybe<Scalars['String']['output']>;
+};
+
 /** conflict action */
 export enum Conflict_Action {
   /** ignore the insert on this row */
   Ignore = 'ignore',
   /** update the row with the given values */
   Update = 'update'
+}
+
+export enum Link__Purpose {
+  /** `EXECUTION` features provide metadata necessary for operation execution. */
+  Execution = 'EXECUTION',
+  /** `SECURITY` features provide metadata necessary to securely resolve fields. */
+  Security = 'SECURITY'
 }
 
 /** column ordering options */
